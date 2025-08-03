@@ -5,12 +5,8 @@ import { rooms, generateRoomCode } from './data.js';
 import { getRandomQuestions } from './questions.js';
 
 const app = express();
-app.use(
-  cors({
-    origin: 'https://roomatch-frontend-u.vercel.app/',
-    methods: ['GET', 'POST'],
-  })
-);
+app.use(cors()); // allows all domains
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
