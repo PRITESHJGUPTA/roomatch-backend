@@ -7,7 +7,7 @@ import { getRandomQuestions } from './questions.js';
 const app = express();
 app.use(
   cors({
-    origin: 'https://roommatch-frontend.vercel.app',
+    origin: 'https://roomatch-frontend-u.vercel.app/',
     methods: ['GET', 'POST'],
   })
 );
