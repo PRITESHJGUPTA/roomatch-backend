@@ -9,11 +9,11 @@ const { getRandomQuestions } = require('./questions');
 const app = express();
 app.use(
   cors({
-    origin: "https://roomatch-frontend.vercel.app/", // your Vercel URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: false,
+    origin: "https://roommatch-frontend.vercel.app",
+    methods: ["GET", "POST", "OPTIONS"],
   })
 );
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
