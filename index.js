@@ -7,7 +7,13 @@ const { rooms, generateRoomCode } = require('./data');
 const { getRandomQuestions } = require('./questions');
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://roomatch-frontend.vercel.app/", // your Vercel URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: false,
+  })
+);
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
